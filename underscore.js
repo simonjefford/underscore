@@ -59,12 +59,12 @@
     }
     exports._ = _;
   } else {
-    root['_'] = _;
     if (typeof define === 'function' && define.amd) {
       define('underscore', function() {
         return _;
       });
     }
+    root['_'] = _;
   }
 
   // Current version.
